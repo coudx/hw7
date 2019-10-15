@@ -2,10 +2,18 @@
   "name": "hw7",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
+    "commander": "^3.0.2",
+    "eslint": "^6.5.1",
+    "eslint-plugin-react": "^7.16.0",
+    "ijavascript": "^5.2.0",
+    "inquirer": "^7.0.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "eslint-plugin-react-hooks": "^2.1.2",
+    "prettier-eslint": "^9.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
