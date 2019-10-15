@@ -1,11 +1,15 @@
-import { Component } from 'react'
+import React from 'react'
+import ReactPDF, { PDFViewer } from '@react-pdf/renderer'
+import './pdf.js'
 import './App.css'
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <div className="pdf"></div>
+      <div class="app">
+        <PDFViewer>
+          <MyDocument />
+        </PDFViewer>
       </div>
     )
   }

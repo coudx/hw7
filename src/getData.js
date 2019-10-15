@@ -20,7 +20,7 @@ const write2File = (file, data, color) => {
   fs.writeFile(file, JSON.stringify(data, null, 2), err => { err ? console.log(err) : console.log('success')} )
 }
 
-async function init() {
+export async function init() {
   try {
     var { username, color } = await inquirer.prompt(question)
     var file = `${username.toLowerCase()}.json`
