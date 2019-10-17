@@ -1,0 +1,62 @@
+.repositories {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.repository {
+  display: block;
+  padding: 15px;
+  color: rgba(0, 0, 0, .9);
+  .repository__name {
+    color: #474a73;
+  }
+  .repository__name,
+  .repository__bottom {
+    transition: .2s color;
+  }
+  &:hover {
+    .repository__name,
+    .repository__bottom {
+      color: #000;
+    }
+  }
+}
+
+.repository__name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.repository__description {
+  flex: 1 1 auto;
+  margin-top: 15px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, .8);
+  font-size: .9rem;
+}
+
+.repository__bottom {
+  display: flex;
+  color: rgba(0, 0, 0, .8);
+  > div {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    &:last-child {
+      margin-right: 0;
+    }
+    > span {
+      font-size: .8rem;
+      &.uk-icon {
+        width: 14px;
+        margin-right: 7px;
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
