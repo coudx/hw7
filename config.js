@@ -133,6 +133,7 @@ export default Object = {
              * @default an array contaiing all the repos info of the user
              */
             repositories: async () => await utils.getRepos(),
+            profile: { name: this.repositories.full_name },
             parse: {
                 /** @see https://developer.github.com/v3/repos/#list-user-repositories docs */
                 repositories: {
