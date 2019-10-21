@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Create a fairly nice GitHub portfolio",
     "scripts": {
-        "build-css": "node-sass -w src/html.scss --include-path  src/styles/ --include-path node_modules/uikit/dist/css/ -o dist/index.css"
+        "start": "./init"
     },
     "repository": {
         "type": "git",
@@ -53,11 +53,13 @@
         "css-loader": "^3.2.0",
         "ejs-loader": "^0.3.5",
         "eslint": "^6.5.1",
+        "express": "^4.17.1",
         "file-loader": "^4.2.0",
         "html-loader": "^0.5.5",
         "html-webpack-plugin": "^3.2.0",
         "mini-css-extract-plugin": "^0.8.0",
         "node-sass": "^4.12.0",
+        "open": "^7.0.0",
         "path": "^0.12.7",
         "postcss-loader": "^3.0.0",
         "prettier": "^1.18.2",

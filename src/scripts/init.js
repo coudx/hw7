@@ -6,6 +6,8 @@ import head from './head'
 import headcss from './images'
 import fs from 'fs'
 import path from 'path'
+import express from 'express'
+import open from 'open'
 
 const dir = path.resolve('.')
 
@@ -109,15 +111,11 @@ async function init() {
 
     const pageHead = function generateHead() {
         let h = head(user)
-        let i = headcss(
-            user.color,
-            user.avatar_url,
-            '../src/assets/background.png'
-        )
+        let i = headcss(user.color, user.avatar_url, './background.png')
         return `<head>
   ${h}
   ${i}
-  <link href="index.css" rel="stylesheet">
+  <link href="./index.css" rel="stylesheet">
 </head>`
     }
 
@@ -219,11 +217,23 @@ ${pageMore}
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-<script src="index.js"></script>
+<script src="./index.js"></script>
 </body>
 </html>`
     }
     const htmlpage = create()
+    fs.copyFile(
+        `${dir}/src/assets/background.png`,
+        `${dir}/dist/background.png`,
+        err => err
+    )
     fs.writeFile(path.resolve(dir, 'dist/index.html'), htmlpage, err => err)
+    console.log('html file created, opening now...')
+    var app = express()
+    app.use(express.static('src/assets/'))
+    app.use(express.static('dist')).listen(3000, () => {
+        console.log('app listening on port 3000')
+        open('http://localhost:3000/')
+    })
 }
 init()
