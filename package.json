@@ -1,39 +1,80 @@
 {
-  "name": "hw7",
-  "version": "0.1.0",
-  "private": true,
-  "type": "module",
-  "dependencies": {
-    "commander": "^3.0.2",
-    "eslint": "^6.5.1",
-    "eslint-plugin-react": "^7.16.0",
-    "ijavascript": "^5.2.0",
-    "inquirer": "^7.0.0",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0",
-    "eslint-plugin-react-hooks": "^2.1.2",
-    "prettier-eslint": "^9.0.0"
-  },
-  "scripts": {
-    "start": "node --experimental-modules src/getData.js && react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+    "name": "hw7",
+    "version": "1.0.0",
+    "description": "Create a fairly nice GitHub portfolio",
+    "scripts": {
+        "build-css": "node-sass -w src/html.scss --include-path  src/styles/ --include-path node_modules/uikit/dist/css/ -o dist/index.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/coudx/hw7.git"
+    },
+    "keywords": [
+        "github-portfolio",
+        "gitportfolio",
+        "gportfolio",
+        "portfolio",
+        "github",
+        "git",
+        "projects",
+        "cv",
+        "resume",
+        "open-source"
     ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "author": "Cloud Xu",
+    "license": "MIT",
+    "homepage": "https://github.com/coudx/hw7#readme",
+    "dependencies": {
+        "@babel/node": "^7.6.3",
+        "@types/copy-webpack-plugin": "^5.0.0",
+        "@types/html-webpack-plugin": "^3.2.1",
+        "@types/mini-css-extract-plugin": "^0.8.0",
+        "@types/node": "^12.11.1",
+        "axios": "^0.19.0",
+        "ejs": "^2.7.1",
+        "global": "^4.4.0",
+        "inquirer": "^7.0.0",
+        "shelljs": "^0.8.3",
+        "source-map": "^0.7.3",
+        "uikit": "^3.2.1",
+        "webpack-dev-server": "^3.8.2",
+        "yarn": "^1.19.1"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.6.4",
+        "@babel/core": "^7.6.4",
+        "@babel/preset-env": "^7.6.3",
+        "autoprefixer": "^9.6.4",
+        "babel-loader": "^8.0.6",
+        "babel-node": "0.0.1-security",
+        "babel-npm": "0.0.1",
+        "clean-webpack-plugin": "^3.0.0",
+        "copy-webpack-plugin": "^5.0.4",
+        "css-loader": "^3.2.0",
+        "ejs-loader": "^0.3.5",
+        "eslint": "^6.5.1",
+        "file-loader": "^4.2.0",
+        "html-loader": "^0.5.5",
+        "html-webpack-plugin": "^3.2.0",
+        "mini-css-extract-plugin": "^0.8.0",
+        "node-sass": "^4.12.0",
+        "path": "^0.12.7",
+        "postcss-loader": "^3.0.0",
+        "prettier": "^1.18.2",
+        "prettier-eslint": "^9.0.0",
+        "resolve-cwd": "^3.0.0",
+        "resolve-url-loader": "^3.1.0",
+        "sass-loader": "^7.3.1",
+        "standard": "^14.3.1",
+        "style-loader": "^1.0.0",
+        "svg-inline-loader": "^0.8.0",
+        "webpack": "^4.41.0",
+        "webpack-cli": "^3.3.9",
+        "webpack-pwa-manifest": "^4.1.1",
+        "workbox-webpack-plugin": "^4.3.1"
+    },
+    "bugs": {
+        "url": "https://github.com/coudx/hw7/issues"
+    },
+    "main": "config.js"
 }
